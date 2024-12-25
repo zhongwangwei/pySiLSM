@@ -1,0 +1,60 @@
+&General
+  casename=testbb
+  casedir=/tera04/zhwei/pySiLSMV3/cases
+  dt=1
+  compare_res = Day 
+  Syear=2000               #must be integer
+  Eyear=2023               #must be integer
+  Min_year=1.0 
+  Max_lat=90.0 
+  Min_lat=-90.0
+  Max_lon=180.0             
+  Min_lon=-180.0
+  local_time = True
+  ###########################################station case##############################################
+  stn_run    = True
+  stn_list   = /tera04/zhwei/pySiLSMV3/list/LIST_FLUXNET_PLUMBER2_For_pySiLSMv3-test.csv  #only work when stn_run is True
+  ObsDataDir = /tera06/zhwei/hydroecology/FLUXNET_PLUMBER2_WEI
+  ######################################################################################################
+/
+
+&ModSet
+  ET_model              = Penman_Monteith  #shuttleworth_wallace
+  #ET_model             = shuttleworth_wallace
+
+  net_radiation_formula = observation #FAO_refcrop #observaton
+  Ground_Heat_model=
+  Canopy_conductance_model=Jarvis1976  #Leuning1995 #
+/
+
+&metrics
+  pc_bias=False          # Percent Bias
+  apb=False              # Absolute Percent Bias
+  RMSE=True              # Root Mean Squared Error
+  ubRMSE=False           # Unbiased Root Mean Squared Error
+  mae=False              # Mean Absolute Error
+  bias=False             # Bias
+  L=False                # Likelihood
+  correlation=True       # correlation coefficient
+  corrlation_R2=False    # correlation coefficient R2
+  NSE=True               # Nash Sutcliffe efficiency coefficient
+  KGE=True               # Kling-Gupta Efficiency
+  KGESS=True             # Normalized Kling-Gupta Efficiency
+  index_agreement=False  # Index of agreement
+  kappa_coeff=False      # Kappa coefficient
+  nBiasScore=False       # Bias Score from ILAMB
+  nRMSEScore=False       # RMSE Score from ILAMB
+/
+
+&outputs
+  LEs=False
+  LEc=False
+  LEi=False
+  HEs=False
+  HEc=False
+  LAI=False
+  swc_surf=False
+  swc_root=False
+  fwet=False
+  RH=False
+/

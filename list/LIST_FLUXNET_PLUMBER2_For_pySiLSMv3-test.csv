@@ -1,0 +1,2 @@
+SiteName,obs_Syear,obs_Eyear,Source,filename,Run_Flag,IGBP_CLASS,z_T,z_U,dt,C3,D0,rss_v,g_min_c,Kr,dl,z0_soil,Km,cd
+AU-DaP,2009,2012,OzFlux,AU-DaP_2009-2012_OzFlux_Flux.nc,1,10,-9999,-9999,3600,1,0.25,1,0.4,0.6,0.068,0.01,2.5,0.1
