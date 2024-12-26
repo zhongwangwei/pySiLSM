@@ -10,9 +10,10 @@
   Min_lat=-90.0
   Max_lon=180.0             
   Min_lon=-180.0
-  local_time = True
+  Isotope=False
   ###########################################station case##############################################
   stn_run    = True
+  local_time = True
   stn_list   = /tera04/zhwei/pySiLSMV3/list/LIST_FLUXNET_PLUMBER2_For_pySiLSMv3-test.csv  #only work when stn_run is True
   ObsDataDir = /tera06/zhwei/hydroecology/FLUXNET_PLUMBER2_WEI
   ######################################################################################################
@@ -24,7 +25,7 @@
 
   net_radiation_formula = observation #FAO_refcrop #observaton
   Ground_Heat_model=
-  Canopy_conductance_model=Jarvis1976  #Leuning1995 #
+  Canopy_conductance_model=Jarvis1976  #Leuning1995 # 
 /
 
 &metrics
